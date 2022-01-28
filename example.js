@@ -1,14 +1,14 @@
 
-if(matchMedia('(max-width: 393px)').matches)
+if(matchMedia('(max-width: 360px)').matches)
 {
     const scoreE = document.getElementById('score');
     let score = 0;
     const grid = document.querySelector('.container');
-    const boardWidth = 380;
+    const boardWidth = 350;
     const boardHeight = 500;
-    const blockWidth = 70;
+    const blockWidth = 50;
     const blockHeight = 15;
-    const userWidth = 90;
+    const userWidth = 60;
     const userHeight = 12;
 
     const currentPositionBall = [180, 40];

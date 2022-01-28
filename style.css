@@ -58,14 +58,14 @@ i
     color: white;
 }
 
-@media(max-width: 393px) {
+@media(max-width: 360px) {
     .container
     {
-        width: 380px;
+        width: 350px;
     }
     .block
     {
-        width: 70px;
+        width: 50px;
         height: 15px;
     }
     .ball
@@ -75,7 +75,7 @@ i
     }
     .user
     {
-        width: 90px;
+        width: 60px;
         height: 15px;
     }
 }
