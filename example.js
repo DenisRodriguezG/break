@@ -1,6 +1,5 @@
 
-if(matchMedia('(max-width: 360px)').matches)
-{
+
     const scoreE = document.getElementById('score');
     let score = 0;
     const grid = document.querySelector('.container');
@@ -195,4 +194,3 @@ if(matchMedia('(max-width: 360px)').matches)
             drawUser();
         }
     }
-}

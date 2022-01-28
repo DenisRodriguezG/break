@@ -7,7 +7,7 @@ body
 }
 .container
 {
-    width: 600px;
+    width: 350px;
     height: 500px;
     background-color: aqua;
     box-shadow: 0 0 0.9px 0.3px black;
@@ -16,22 +16,22 @@ body
 .block
 {
     position: absolute;
-    width: 100px;
-    height: 30px;
+    width: 50px;
+    height: 15px;
     background-color: red;
 }
 .ball
 {
-    width: 40px;
-    height: 40px;
+    width: 15px;
+    height: 15px;
     background-color: blue;
     position: absolute;
     border-radius: 50%;
 }
 .user
 {
-    width: 140px;
-    height: 30px;
+    width: 60px;
+    height: 15px;
     background-color: green;
     border-radius: 20px;
     position: absolute;
@@ -58,27 +58,6 @@ i
     color: white;
 }
 
-@media(max-width: 360px) {
-    .container
-    {
-        width: 350px;
-    }
-    .block
-    {
-        width: 50px;
-        height: 15px;
-    }
-    .ball
-    {
-        width: 15px;
-        height: 15px;
-    }
-    .user
-    {
-        width: 60px;
-        height: 15px;
-    }
-}
 
 /*.grid
 {
