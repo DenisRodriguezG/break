@@ -1,0 +1,125 @@
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container
+{
+    width: 600px;
+    height: 500px;
+    background-color: aqua;
+    box-shadow: 0 0 0.9px 0.3px black;
+    position: relative;
+}
+.block
+{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background-color: red;
+}
+.ball
+{
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    position: absolute;
+    border-radius: 50%;
+}
+.user
+{
+    width: 140px;
+    height: 30px;
+    background-color: green;
+    border-radius: 20px;
+    position: absolute;
+}
+.container__navigation
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 300px;
+    background-color: black;
+    padding: 4px;
+}
+.container__navigation > div
+{
+    background-color: gray;
+    border-radius: 20px;
+    width: 80px;
+    text-align: center;
+}
+i
+{
+    font-size: 30px;
+    color: white;
+}
+
+@media(max-width: 393px) {
+    .container
+    {
+        width: 380px;
+    }
+    .block
+    {
+        width: 70px;
+        height: 15px;
+    }
+    .ball
+    {
+        width: 15px;
+        height: 15px;
+    }
+    .user
+    {
+        width: 90px;
+        height: 15px;
+    }
+}
+
+/*.grid
+{
+    position: absolute;
+    width: 560px;
+    height: 300px;
+    border: solid black 1px;
+    margin-top: 100px;
+}
+
+.user
+{
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background-color: blueviolet;
+}
+
+.block
+{
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background-color: blue;
+}
+
+.ball
+{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: red;
+}
+
+.ballExample
+{
+    height: 20px;
+    width: 20px;
+    background-color: chartreuse;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 300px;
+}*/
