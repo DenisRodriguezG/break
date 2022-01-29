@@ -121,10 +121,15 @@
         if(blocks.length === 0)
         {
             scoreE.innerText = "You win"
+            clearInterval(timer)
         }
-        if(setCurrentPositionBall[0] >= (boardWidth - diameterBall) || setCurrentPositionBall[1] >= (boardHeight - diameterBall) || setCurrentPositionBall[0] <= 0)
+        if(setCurrentPositionBall[0] >= (boardWidth - diameterBall) || setCurrentPositionBall[1] >= (boardHeight - diameterBall))
         {
             changeDirection();
+        }
+        if(setCurrentPositionBall[0] <= 0)
+        {
+            changeDirection(1)
         }
         if(setCurrentPositionBall[0] > setCurrentPositionUser[0] && setCurrentPositionBall[0] < (setCurrentPositionUser[0] + userWidth) && setCurrentPositionBall[1] === (setCurrentPositionUser[1] + userHeight))
         {
@@ -132,7 +137,7 @@
         }
         if(setCurrentPositionBall[1] === 0)
         {
-            scoreE.innerText = "You loser";
+            scoreE.innerText = "You're a loser";
             clearInterval(timer)
         }
     } 
@@ -142,20 +147,45 @@
     {
         if(xDirection === 2 && yDirection === 2)
         {
-            xDirection = -2;
-            return;
+            if(blocks.length === 1)
+            {
+                xDirection = 0;
+                yDirection = -2;
+            }
+            else
+            {
+                xDirection = -2;
+                return;
+            }
+            
         }
         if(xDirection === -2 && yDirection === 2)
         {
-            yDirection = -2;
-            return;
+            if(userColi === 1)
+            {
+                if(blocks.length === 3)
+            {
+                yDirection = 2;
+                xDirection = 2;
+                return;
+            }
+                xDirection = 2;
+                yDirection = -2;
+                return;
+            }
+            else
+            {
+                yDirection = -2;
+                return;
+            }
+            
         }
         if(xDirection === -2 && yDirection === -2)
         {
             if(userColi)
         {
             yDirection = 2
-            xDirection = 2
+            xDirection = -2
             return;
         }else{
             xDirection = 2;
@@ -181,7 +211,7 @@
     {
         if(setCurrentPositionUser[0] > 0)
         {
-            setCurrentPositionUser[0] -= 10;
+            setCurrentPositionUser[0] -= 7;
             drawUser();
             
         }
@@ -190,7 +220,7 @@
     {
         if(setCurrentPositionUser[0] < (boardWidth - userWidth))
         {
-            setCurrentPositionUser[0] += 10;
+            setCurrentPositionUser[0] += 7;
             drawUser();
         }
     }
